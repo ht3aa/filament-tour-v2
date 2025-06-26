@@ -1,12 +1,12 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Livewire;
+namespace Ht3aa\FilamentTour\Livewire;
 
 use Filament\Facades\Filament;
 use Filament\Resources\Resource;
-use JibayMcs\FilamentTour\FilamentTourPlugin;
-use JibayMcs\FilamentTour\Highlight\HasHighlight;
-use JibayMcs\FilamentTour\Tour\HasTour;
+use Ht3aa\FilamentTour\FilamentTourPlugin;
+use Ht3aa\FilamentTour\Highlight\HasHighlight;
+use Ht3aa\FilamentTour\Tour\HasTour;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
@@ -27,7 +27,7 @@ class FilamentTourWidget extends Component
             $instance = new $class;
 
             if ($instance instanceof Resource) {
-                collect($instance->getPages())->map(fn ($item) => $item->getPage())
+                collect($instance->getPages())->map(fn($item) => $item->getPage())
                     ->flatten()
                     ->each(function ($item) use (&$filamentClasses) {
                         $filamentClasses[] = $item;
@@ -35,7 +35,6 @@ class FilamentTourWidget extends Component
             } else {
                 $filamentClasses[] = $class;
             }
-
         }
 
         foreach ($filamentClasses as $class) {
@@ -58,7 +57,8 @@ class FilamentTourWidget extends Component
             $this->highlights = array_merge($this->highlights, (new $class)->constructHighlights($class));
         }
 
-        $this->dispatch('filament-tour::loaded-elements',
+        $this->dispatch(
+            'filament-tour::loaded-elements',
             only_visible_once: FilamentTourPlugin::get()->getHistoryType() == 'local_storage' && (is_bool(FilamentTourPlugin::get()->isOnlyVisibleOnce()) ? FilamentTourPlugin::get()->isOnlyVisibleOnce() : config('filament-tour.only_visible_once')),
             tours: $this->tours,
             highlights: $this->highlights,

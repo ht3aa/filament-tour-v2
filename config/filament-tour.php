@@ -1,6 +1,6 @@
 <?php
 
-// config for JibayMcs/FilamentTour
+// config for Ht3aa/FilamentTour
 return [
 
     'only_visible_once' => true,

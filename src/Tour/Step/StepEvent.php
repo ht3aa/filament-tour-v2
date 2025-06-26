@@ -1,10 +1,10 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Tour\Step;
+namespace Ht3aa\FilamentTour\Tour\Step;
 
 use Closure;
 use Filament\Notifications\Notification;
-use JibayMcs\FilamentTour\Tour\Step;
+use Ht3aa\FilamentTour\Tour\Step;
 
 trait StepEvent
 {

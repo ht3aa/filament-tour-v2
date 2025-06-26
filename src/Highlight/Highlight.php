@@ -1,6 +1,6 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Highlight;
+namespace Ht3aa\FilamentTour\Highlight;
 
 use Closure;
 use Illuminate\Support\HtmlString;
@@ -41,7 +41,8 @@ class Highlight
      */
     public static function make(string $parent): static
     {
-        return app(static::class,
+        return app(
+            static::class,
             [
                 'id' => Str::slug($parent),
                 'colors' => [
@@ -49,7 +50,8 @@ class Highlight
                     'light' => 'rgb(0,0,0)',
                 ],
                 'parent' => $parent,
-            ]);
+            ]
+        );
     }
 
     public function getId(): string

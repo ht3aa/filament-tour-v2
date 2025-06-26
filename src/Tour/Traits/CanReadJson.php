@@ -1,10 +1,10 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Tour\Traits;
+namespace Ht3aa\FilamentTour\Tour\Traits;
 
 use Filament\Notifications\Notification;
 use Illuminate\Support\Facades\Lang;
-use JibayMcs\FilamentTour\Tour\Step;
+use Ht3aa\FilamentTour\Tour\Step;
 
 trait CanReadJson
 {
@@ -14,14 +14,16 @@ trait CanReadJson
 
         $steps = [];
 
-        $app = app(static::class,
+        $app = app(
+            static::class,
             [
                 'id' => $tour['id'],
                 'colors' => [
                     'dark' => '#fff',
                     'light' => 'rgb(0,0,0)',
                 ],
-            ]);
+            ]
+        );
 
         $app->route($tour['route'] ?? null);
 

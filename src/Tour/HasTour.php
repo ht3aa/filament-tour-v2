@@ -1,9 +1,9 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Tour;
+namespace Ht3aa\FilamentTour\Tour;
 
 use Filament\Facades\Filament;
-use JibayMcs\FilamentTour\Tour\Traits\CanConstructRoute;
+use Ht3aa\FilamentTour\Tour\Traits\CanConstructRoute;
 
 trait HasTour
 {

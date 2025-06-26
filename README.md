@@ -12,13 +12,13 @@ You can install this filament plugin via composer:
 For Filament V3.x
 
 ```bash
-composer require jibaymcs/filament-tour:"^3.0"
+composer require ht3aa/filament-tour:"^3.0"
 ```
 
 For Filament V2.x
 
 ```bash
-composer require jibaymcs/filament-tour:"^2.0"
+composer require ht3aa/filament-tour:"^2.0"
 ```
 
 You can publish the config file with:
@@ -44,7 +44,7 @@ This is the contents of the published config file:
 ## Usage
 
 ```php
-use JibayMcs\FilamentTour\FilamentTourPlugin;
+use Ht3aa\FilamentTour\FilamentTourPlugin;
 
 public function panel(Panel $panel) {
 	return $panel->default()
@@ -72,7 +72,7 @@ If you don't already have a customized dashboard, please refer to the following 
 <?php  
 namespace App\Filament\Pages;  
   
-use JibayMcs\FilamentTour\Tour\HasTour;
+use Ht3aa\FilamentTour\Tour\HasTour;
   
 class Dashboard extends FilamentDashboard {
 
@@ -89,8 +89,8 @@ ___
 ### Create a simple tour !
 
 ```php
-use JibayMcs\FilamentTour\Tour\Step;
-use JibayMcs\FilamentTour\Tour\Tour;
+use Ht3aa\FilamentTour\Tour\Step;
+use Ht3aa\FilamentTour\Tour\Tour;
 
 public function tours(): array {
     return [
@@ -164,7 +164,7 @@ You can also bring up tours for users when they click on a button. See more in t
 
 #### - From a direct URL
 ```php
-use JibayMcs\FilamentTour\Tour\Tour;
+use Ht3aa\FilamentTour\Tour\Tour;
 
 public function tours(): array {
     return [
@@ -176,7 +176,7 @@ public function tours(): array {
 #### - From your Storage
 
 ```php
-use JibayMcs\FilamentTour\Tour\Tour;
+use Ht3aa\FilamentTour\Tour\Tour;
 use Illuminate\Support\Facades\Storage;
 
 public function tours(): array {
@@ -268,7 +268,7 @@ public function tours(): array {
 ### Tour methods reference
 
 ```php
-use JibayMcs\FilamentTour\Tour\Tour;
+use Ht3aa\FilamentTour\Tour\Tour;
 
 // Instanciate a tour, and provide an id, to trigger it later
 Tour::make(string $id)
@@ -316,7 +316,7 @@ Tour::make(... $params)
 ### Step methods reference
 
 ```php
-use JibayMcs\FilamentTour\Tour\Step;
+use Ht3aa\FilamentTour\Tour\Step;
 
 // If no element provided, the step act like a modal
 Step::make(string $element = null)
@@ -364,7 +364,7 @@ Same as tour, use the correct trait !
 
 namespace App\Filament\Pages;  
   
-use JibayMcs\FilamentTour\Highlight\HasHighlight;  
+use Ht3aa\FilamentTour\Highlight\HasHighlight;  
   
 class Dashboard extends FilamentDashboard {
 
@@ -380,7 +380,7 @@ class Dashboard extends FilamentDashboard {
 - Create a simple highlight element !
 
 ```php
-use JibayMcs\FilamentTour\Highlight\Highlight;
+use Ht3aa\FilamentTour\Highlight\Highlight;
 
 public function highlights(): array {
 
@@ -408,7 +408,7 @@ ___
 ### Highlight methods reference
 
 ```php
-use JibayMcs\FilamentTour\Highlight\Highlight;
+use Ht3aa\FilamentTour\Highlight\Highlight;
 
 // Instantiate a highlight with a CSS select of the element where the icon button is next to
 Highlight::make(string $parent)

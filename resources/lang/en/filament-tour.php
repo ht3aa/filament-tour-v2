@@ -1,6 +1,6 @@
 <?php
 
-// translations for JibayMcs/FilamentTour
+// translations for Ht3aa/FilamentTour
 return [
 
     'button' => [

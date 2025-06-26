@@ -1,8 +1,8 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Highlight;
+namespace Ht3aa\FilamentTour\Highlight;
 
-use JibayMcs\FilamentTour\Tour\Traits\CanConstructRoute;
+use Ht3aa\FilamentTour\Tour\Traits\CanConstructRoute;
 
 trait HasHighlight
 {
@@ -49,7 +49,6 @@ trait HasHighlight
             }
 
             return $data;
-
         })->toArray();
     }
 

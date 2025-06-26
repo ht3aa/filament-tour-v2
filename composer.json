@@ -1,24 +1,24 @@
 {
-    "name": "jibaymcs/filament-tour",
+    "name": "ht3aa/filament-tour",
     "description": "Bring the power of DriverJs to your Filament panels and start a tour !",
     "keywords": [
-        "JibayMcs",
+        "ht3aa",
         "laravel",
         "filament-tour",
         "filament",
         "filamentphp",
         "driverjs"
     ],
-    "homepage": "https://github.com/jibaymcs/filament-tour",
+    "homepage": "https://github.com/ht3aa/filament-tour",
     "support": {
-        "issues": "https://github.com/jibaymcs/filament-tour/issues",
-        "source": "https://github.com/jibaymcs/filament-tour"
+        "issues": "https://github.com/ht3aa/filament-tour/issues",
+        "source": "https://github.com/ht3aa/filament-tour"
     },
     "license": "MIT",
     "authors": [
         {
-            "name": "JibayMcs",
-            "email": "jb@ss2i-services.fr",
+            "name": "ht3aa",
+            "email": "ht3aa2001@gmail.com",
             "role": "Developer"
         }
     ],
@@ -40,7 +40,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JibayMcs\\FilamentTour\\": "src/"
+            "Ht3aa\\FilamentTour\\": "src/"
         }
     },
     "scripts": {
@@ -59,7 +59,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JibayMcs\\FilamentTour\\FilamentTourServiceProvider"
+                "Ht3aa\\FilamentTour\\FilamentTourServiceProvider"
             ]
         }
     },

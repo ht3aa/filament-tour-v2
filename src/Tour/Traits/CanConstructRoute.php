@@ -1,6 +1,6 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Tour\Traits;
+namespace Ht3aa\FilamentTour\Tour\Traits;
 
 use Filament\Facades\Filament;
 
@@ -41,7 +41,6 @@ trait CanConstructRoute
             } else {
                 $this->route = parse_url($instance->getUrl())['path'] ?? '/';
             }
-
         }
 
         return $this->route;

@@ -1,12 +1,12 @@
 <?php
 
-namespace JibayMcs\FilamentTour;
+namespace Ht3aa\FilamentTour;
 
 use Filament\Support\Assets\Asset;
 use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
-use JibayMcs\FilamentTour\Livewire\FilamentTourWidget;
+use Ht3aa\FilamentTour\Livewire\FilamentTourWidget;
 use Livewire\Livewire;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -41,13 +41,13 @@ class FilamentTourServiceProvider extends PackageServiceProvider
     protected function getAssets(): array
     {
         return [
-            Css::make('filament-tour-styles', __DIR__.'/../resources/dist/filament-tour.css'),
-            Js::make('filament-tour-scripts', __DIR__.'/../resources/dist/filament-tour.js'),
+            Css::make('filament-tour-styles', __DIR__ . '/../resources/dist/filament-tour.css'),
+            Js::make('filament-tour-scripts', __DIR__ . '/../resources/dist/filament-tour.js'),
         ];
     }
 
     protected function getAssetPackageName(): ?string
     {
-        return 'jibaymcs/filament-tour';
+        return 'ht3aa/filament-tour';
     }
 }

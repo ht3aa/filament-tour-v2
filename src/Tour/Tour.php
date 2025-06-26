@@ -1,11 +1,11 @@
 <?php
 
-namespace JibayMcs\FilamentTour\Tour;
+namespace Ht3aa\FilamentTour\Tour;
 
 use Closure;
 use Filament\Support\Concerns\EvaluatesClosures;
 use Illuminate\Support\Facades\Lang;
-use JibayMcs\FilamentTour\Tour\Traits\CanReadJson;
+use Ht3aa\FilamentTour\Tour\Traits\CanReadJson;
 
 class Tour
 {
@@ -55,19 +55,21 @@ class Tour
     {
         $params = collect($params);
 
-        switch ($params->keys()->map(fn ($key) => $key)->toArray()[0]) {
+        switch ($params->keys()->map(fn($key) => $key)->toArray()[0]) {
             case 'url':
             case 'json':
                 return self::fromJson($params->first());
             default:
-                return app(static::class,
+                return app(
+                    static::class,
                     [
                         'id' => $params->first(),
                         'colors' => [
                             'dark' => '#fff',
                             'light' => 'rgb(0,0,0)',
                         ],
-                    ]);
+                    ]
+                );
                 break;
         }
     }
